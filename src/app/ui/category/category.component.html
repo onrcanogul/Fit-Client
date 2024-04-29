@@ -1,0 +1,9 @@
+<div style="display: flex; justify-content: center; align-items: center; ">
+<mat-list role="list" style=" width: 60%;" >
+    <div class="category-list" *ngFor="let category of categoryList.entity">
+    <mat-list-item role="listitem"  style="border:1px solid lightgray;border-radius: 15px;;" > <span>{{category.name}}</span>  </mat-list-item>
+    <a routerLink="/foods/{{category.id}}" mat-raised-button color="primary" style="border-radius: 15px;">Primary</a> 
+    </div>
+     
+</mat-list>
+</div>

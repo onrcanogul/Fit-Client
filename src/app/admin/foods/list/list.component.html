@@ -1,0 +1,44 @@
+<div style="justify-content: center; align-items: center; display: flex; flex-direction: column;">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Fat</th>
+        <th scope="col">Carb</th>
+        <th scope="col">Protein</th>
+        <th scope="col">Calorie</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let food of foods?.foods">
+        <th scope="row">1</th>
+        <td>{{food.name}}</td>
+        <td>{{food.fat}}</td>
+        <td>{{food.carbohydrate}}</td>
+        <td>{{food.protein}}</td>
+        <td>{{food.calorie}}</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination" >
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

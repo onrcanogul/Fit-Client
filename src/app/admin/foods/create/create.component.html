@@ -1,0 +1,29 @@
+<div>
+<div class="mb-3">   
+    <input type="text" class="form-control" id="Name" placeholder="Name" #txtName>
+</div>
+<div class="mb-3">
+    
+    <input type="number" class="form-control" id="Fat" placeholder="Fat" #txtFat>
+</div>
+<div class="mb-3">
+   
+    <input type="number" class="form-control" id="Protein" placeholder="Protein" #txtProtein>
+</div>
+<div class="mb-3">    
+    <input type="number" class="form-control" id="Carbohydrate" placeholder="Carbohydrate" #txtCarb>
+</div>
+<div class="mb-3">
+    
+    <input type="number" class="form-control" id="Calorie" placeholder="Calorie" #txtCalorie>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+<button type="button" class="btn btn-primary" (click)="createFood(txtName.value, txtCarb.value,txtFat.value,txtProtein.value,txtCalorie.value)">Create Nutrient</button>
+</div>
+</div>
+<!-- 
+  public float Fat { get; set; }
+public float Carbohydrate { get; set; }
+public float Protein { get; set; }
+public string Name { get; set; }
+public int Calorie { get; set; } -->

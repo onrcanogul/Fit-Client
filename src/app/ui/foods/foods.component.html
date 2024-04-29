@@ -1,0 +1,24 @@
+<h4 style="text-align: center; font-size: 10px;" >Besin değerleri 100gram/mililitre üzerindendir</h4>
+<div class="nutrient-list">
+<mat-card style="width: 320px; height: 300px; margin-top: 35px;" *ngFor="let nutrient of foods">
+  <div style="display: flex; justify-content: center; align-self: center;">
+    <mat-card-header class="a" style="text-align: center; width: 100%;" > <p style="text-align: center;"><strong>{{nutrient.name}} </strong></p></mat-card-header>
+    <hr>
+  </div>
+    <mat-card-content class="a"><strong>Fat:</strong> {{nutrient.fat}} </mat-card-content>
+    <br>
+    <mat-card-content class="a"><strong>Protein:</strong> {{nutrient.protein}} </mat-card-content>
+    <br>
+    <mat-card-content class="a"><strong>Karbonhidrat:</strong> {{nutrient.carbohydrate}} </mat-card-content>
+    <br>
+    <mat-card-content class="a"><strong>Kalori: </strong>{{nutrient.calorie}}</mat-card-content>
+    <br>
+    <mat-card-content class="a"><strong>Kategoriler:</strong> <a style="text-decoration: none; color: green;" routerLink="/foods/{{category.id}}" *ngFor="let category of nutrient.categories">{{category.name }} </a></mat-card-content>
+    <mat-form-field class="example-full-width" style="margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+        <mat-label>Miktari giriniz(gram/mililitre)</mat-label>
+        <input matInput  type="number" style="height: 20px;" #txtMeasure>
+        <button (click)="addToBasketItem(nutrient.id,txtMeasure.value)" class="btn btn-success" style="margin-left: 250px; border-radius: 100%; width: 50px; height: 50px;">+</button>
+      </mat-form-field>
+    
+</mat-card>
+</div> <!--  -->

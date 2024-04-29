@@ -1,0 +1,17 @@
+.list-admin{
+    width: 100%;  
+    border: none; 
+}
+.list-sidebar a{
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;  
+    border-radius: 15px;
+    border: none;
+}
+.list-sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

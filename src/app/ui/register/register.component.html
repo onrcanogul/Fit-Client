@@ -1,0 +1,32 @@
+<div class="register-div">
+    <mat-form-field class="example-full-width">
+        <mat-label>Kullanıcı Adı</mat-label>
+        <input matInput value="" type="text" #txtUsername>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput value="" type="email" #txtEmail>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Şifre</mat-label>
+        <input matInput value="" type="password" #txtPassword>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Şifre Tekrarı</mat-label>
+        <input matInput value="" type="password" #txtPasswordConfirm>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Cinsiyet</mat-label>
+        <mat-select #txtGender>
+          @for (food of gender; track food) {
+            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+    
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <button mat-flat-button color="primary" style="background-color: green;" (click)="register(txtGender.value,txtEmail.value,txtUsername.value,txtPassword.value,txtPasswordConfirm.value)">Kayıt Ol</button>
+    </div>
+</div>

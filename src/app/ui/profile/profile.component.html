@@ -1,0 +1,47 @@
+<div class="row g-3">
+    <div class="col-md-2">
+      <label for="validationServer01" class="form-label">Boy</label>
+      <input type="number" class="form-control " id="validationServer01" value="{{user?.height}}"  required #txtHeight>
+      
+        
+      
+    </div>
+    <div class="col-md-2">
+      <label for="validationServer02" class="form-label">Kilo</label>
+      <input type="number" class="form-control " id="validationServer02" value="{{user?.weight}}" required #txtWeight>
+      <div class="valid-feedback">
+        Başarılı
+      </div>
+    </div>
+    <div class="col-md-2">
+      <label for="validationServerUsername" class="form-label">Aktivite</label>    
+        <select class="form-select " id="validationServer04" aria-describedby="validationServer04Feedback" required #txtOption>
+          <option selected disabled value="{{user?.activity}}" >Seçiniz</option>
+          <option>Hareketsiz</option>
+          <option>Düşük seviyede hareketli</option>
+          <option>Orta seviyede hareketli</option>
+          <option>Yüksek seviyede hareketli/option>
+          <option>Çok yüksek seviyede hareketli</option>
+        </select>
+        
+      
+    </div>
+    
+    <div class="col-md-2">
+      <label for="validationServer03" class="form-label">Yağ Oranı</label>
+      <input type="number" class="form-control " id="validationServer03" aria-describedby="validationServer03Feedback" value="{{user?.fatRate}}" required #txtFatRate>
+      
+    </div>
+    
+    <div class="col-md-2">
+      <label for="validationServer05" class="form-label">Yaş</label>
+      <input type="number" class="form-control " id="validationServer05" aria-describedby="validationServer05Feedback" value="{{user?.age}}" required #txtAge>
+      <div id="validationServer05Feedback" class="invalid-feedback">
+       Yaş giriniz
+      </div>
+    </div>
+    
+    <div class="col-2" style="justify-content: center; align-items: center;display: flex; " >
+      <button class="btn btn-primary" type="submit"  style="margin-top: 25px;" (click)="update(txtHeight.value,txtWeight.value,txtFatRate.value,txtAge.value,txtOption.value)">Bilgileri Güncelle</button>
+    </div>
+  </div>

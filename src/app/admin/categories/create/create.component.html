@@ -1,0 +1,10 @@
+<div >
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput value="" type="text" #txtName>
+    </mat-form-field>
+    
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <button mat-flat-button color="primary" style="background-color: green;"  (click)="createCategory(txtName.value)">Create Category</button>
+    </div>
+</div>

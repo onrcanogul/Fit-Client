@@ -1,0 +1,13 @@
+<div class="register-div">   
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput value="" type="email" #txtEmail>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Şifre</mat-label>
+        <input matInput value="" type="password" #txtPassword>
+      </mat-form-field>
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <button mat-flat-button color="primary" style="background-color: green;" (click)="login(txtEmail.value,txtPassword.value)">Giriş Yap</button>
+    </div>
+</div>

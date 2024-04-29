@@ -1,0 +1,47 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 15%;">İsim</th>
+      <th scope="col"  style="width: 15%;">Yağ</th>
+      <th scope="col" style="width: 15%;">Protein</th>
+      <th scope="col" style="width: 15%;">Karbonhidrat</th>
+      <th scope="col" style="width: 15%;">Kalori</th>
+      <th scope="col" style="width: 15%;">Miktar (gram/mililitre)</th>
+      <th scope="col" style="width: 15%;">Güncelle</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let item of items.basketItems">
+      <td>{{item.name}}</td>
+      <td>{{item.fat}}</td>
+      <td>{{item.protein}}</td>
+      <td>{{item.carbohydrate}}</td>
+      <td>{{item.calorie}}</td>
+      <td><input type="number" placeholder="Miktar" value="{{item.measure}}" #txtMeasure></td>
+      <td><button (click)="updateMeasure(txtMeasure.value,item.id)" class="btn btn-success">Güncelle</button></td>
+    </tr>
+
+    
+
+   
+  </tbody>
+</table>
+
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+  <div class="card" style="width: 18rem;" style="display: flex; justify-content: center;align-items: center;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Toplam Kalori: {{items.totalCalorie}}</li>
+      <li class="list-group-item">Toplam Yağ : {{items.totalFat}}</li>
+      <li class="list-group-item">Toplam Protein : {{items.totalProtein}}</li>
+      <li class="list-group-item">Toplam Karbonhidrat :{{items.totalCarbohydrate}} </li>
+      <li class="list-group-item" style="background-color: green; color: #ffff;">Günlük Kalori İhtiyacınız :{{activeUser.bmr}}</li>
+      
+     
+      
+    </ul>
+  </div>
+
+  
+</div>

@@ -1,0 +1,12 @@
+.nutrient-list{
+    display: flex;
+    flex-direction: row;
+    gap : 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.example-full-width {
+    width: 100%;
+}
